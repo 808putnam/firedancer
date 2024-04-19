@@ -142,7 +142,9 @@ main( int argc,
       for( int i=start; i<argc; i++ ) args[i-start+1] = argv[i];
       args[ argc-start+1 ] = NULL;
 
-      FD_TEST( execv( "/bin/gdb", args ) >= 0 );
+      // qtrade
+      // FD_TEST( execv( "/bin/gdb", args ) >= 0 );
+      FD_TEST( execv( "/usr/bin/gdb", args ) >= 0 );
     }
   }
 }
